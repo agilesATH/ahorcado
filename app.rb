@@ -2,6 +2,7 @@ require 'sinatra'
 require './config'
 
 get '/' do
+	session['acierto']="_ _ _ _"
 	erb(:index)
 end
 
