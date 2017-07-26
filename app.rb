@@ -17,12 +17,8 @@ post '/guardar'  do
 		if palabra[index] == letratemp
 			temporal[index] = letratemp
 		end
-	end
-
-	#session['letra'] = letratemp
-	#posicion = palabra[letratemp]
-	#temporal[posicion]=letratemp
-	session['acierto']=temporal.join
-	#session['acierto'] = posicion
+	end	
+	session['acierto']=temporal.join(" ")
+	
 	erb(:index)
 end
