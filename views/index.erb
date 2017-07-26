@@ -6,6 +6,9 @@
 <body>
 	<h1>Ganame si puedes</h1>
 	<p></p>
- 	<h1>_ _ _ _</h1>
+ 	<form action="/guardar" method="post">
+ 		<input name="palabra"><%=session['acierto']%></input>
+ 		<input type="submit" value="enviar">
+ 	</form>
 </body>
 </html>
