@@ -1,14 +1,17 @@
 class Acierto
 
-	def initialize letra ="A"
-		@letra = letra
+	def initialize 
+		@palabra="AMOR"
+		@temporal=['_', '_', '_', '_']
+
 	end
 
-	def verAcierto(letra)
-		if letra=="A" or letra =="a"
-			"A _ _ _"
-		else
-			"_ _ _ _"
+	def verAcierto letra
+		(0..@palabra.size).each do |index|
+			if @palabra[index] == letra
+				@temporal[index] = letra
+			end
 		end
+		@temporal.join
 	end
 end
