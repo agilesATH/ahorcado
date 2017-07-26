@@ -17,3 +17,9 @@ end
 Given(/^digito letra "([^"]*)"$/) do |letra|
   expect(page.body).to match /#{letra}/m
 end
+
+Given(/^finalice juego$/) do
+  visit '/'
+  click_button("enviar")
+  visit '/win'
+end

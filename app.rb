@@ -18,7 +18,12 @@ post '/guardar'  do
 			temporal[index] = letratemp
 		end
 	end	
-	session['acierto']=temporal.join(" ")
+	session['acierto'] =temporal.join(" ")
+	#palabra = temporal.join(" ")
 	
-	erb(:index)
+	if(session['acierto']== "A M O R")
+		erb(:win)
+	else 
+		erb(:index)
+	end
 end
